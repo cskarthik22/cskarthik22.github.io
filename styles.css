@@ -5,7 +5,7 @@ body {
 /* Body Header */
 
 #body-header {
-    height: 65vh;
+    height: 35vh;
     opacity: 0.8;
     background-image: url(https://cskarthik22.github.io/images/bitsandbytes.jpg);
     background-size: cover;
