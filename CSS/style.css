@@ -132,5 +132,42 @@ body {
   letter-spacing: .1rem;
   text-transform: capitalize;
   text-decoration: none;
+  transition: color .5s
 }
+
+.navigation-item {
+  position: relative;
+}
+
+.navigation-link::before {
+  content: "";
+  width: 0rem;
+  height: .1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  transition: width .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link::after {
+  content: "";
+  width: 0rem;
+  height: .1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  transition: width .3s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link:hover {
+  color: #deaa86;
+}
+.navigation-link:hover::before, .navigation-link:hover::after {
+  width: 3rem;
+}
+
+
+
 
