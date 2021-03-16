@@ -1,0 +1,57 @@
+html {
+  font-size: 62.5%
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', san-serif;
+}
+.menu-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.menu-icon:hover .line{
+  width: 2.5rem;
+}
+
+.line {
+  height: .2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: .6rem;
+}
+
+.line-1, .line-3 {
+  width: 1.8rem;
+  transition: width 0.3s;
+}
+
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  font-size: 2rem;
+  color: #777;
+}
+
+
+
