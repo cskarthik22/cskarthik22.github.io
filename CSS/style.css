@@ -63,8 +63,7 @@ body {
 }
 
 .navigation {
-  /*margin-left: 8rem; */
-  left: -22rem; /*(30 for navbar-8 for sidebar) */
+  left: -22rem; 
   position: fixed;
   widter30rem;
   height: 100%;
