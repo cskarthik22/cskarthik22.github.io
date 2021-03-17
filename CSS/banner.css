@@ -1,6 +1,60 @@
 .header {
   margin-left: 8rem;
   height: 100vh;
-  background: url(https://1635225677.rsc.cdn77.org/images/xuetangx-micro-diploma-computer-science.jpg) center no-repeat;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,.2)),url(https://1635225677.rsc.cdn77.org/images/xuetangx-micro-diploma-computer-science.jpg) center no-repeat;
   background-size: cover;
+}
+
+.container {
+  margin-left: 8rem;
+  margin-top: .1rem;
+  padding: .5rem 0;
+  background-color: rgba(255,255,255,.1);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: auto;
+}
+
+.card {
+  padding: 3rem;
+  margin: 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 2rem;
+}
+
+.card1 {
+  padding: .5em;
+  margin: .2em;
+  font-size: 2em;
+  background-color: rgba(0,0,0,.4);
+  color: #fff;
+  border-radius: 5rem;
+}
+
+.cpp-container {
+  margin-left: 8rem;
+  margin-top: .1rem;
+  padding: .5rem 0;
+  background-color: rgba(255,255,255,.1);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: auto;
+  align-items: center;
+}
+
+.cpp-card {
+  padding: 0rem;
+  margin: 0rem;
+  width: 500%;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: .2rem;
+  align-items: center;
 }
