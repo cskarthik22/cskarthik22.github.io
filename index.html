@@ -4,10 +4,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/4149d0e55a.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="CSS/style.css" rel="stylesheet" />
   <link href="CSS/banner.css" rel="stylesheet" />
+  <link href="CSS/cube.css" rel="stylesheet" />
+  <link href="CSS/desert.css" rel="stylesheet" />
   
   <title>Competitve Programming</title>
   </head>
@@ -44,7 +47,7 @@
      </div>
      <ul class="navigation-list">
        <li class="navigation-item"><a href="#" class="navigation-link"> home </a></li>
-       <li class="navigation-item"><a href="#" class="navigation-link"> Sorting </a></li>
+       <li class="navigation-item"><a href="#Sorting" class="navigation-link"> Sorting </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Divide-Conquer </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Greedy </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Backtracking </a></li>
@@ -59,10 +62,132 @@
      </div>
    </nav>
  </div>
-  <header class="header">
+ 
+  <header class="header1">
     <div class="brand">
     </div>
   </header>
+  
+  <div class="container">
+    <div class="container card1"><a href="#Fibonacci" class="navigation-link"> Fibonacci </a></div>
+    <div class="container card1"><a href="#CoinChange" class="navigation-link"> CoinChange </a></div>
+    
+  </div>
+  
+  <div class="cpp-container"> 
+  <section  id="Fibonacci" class="cpp-container cpp-card">
+   <div> 
+    <pre class='prettyprint lang-cpp'><code>
+  // #1: Fibonacci
+  
+ int fibo(int n) {
+    if( n==0 || n==1)
+        return 1;
+    return fibo(n-1) + fibo(n-2);
+ }
+
+ int fibo_dp_bottomup(int n) {
+    /* Effective space utilization, 
+    instead of array, just maintain
+     only 2 varaibles */
+    int first = 1;
+    int second = 1;
+    int ans = 0;
+    if (n==0 || n==1)
+        return 1;
+    for(int i=2; i&lt;=n; i++) {
+        ans = second + first;
+        first = second;
+        second = ans;
+    }
+    return ans;
+}
+
+int fibo_dp_topdown(int n, int* dp) {
+    // Memoization = Recursion + lookup table
+    if( n==0 || n==1) {
+        return 1;
+    }
+    if(dp[n]!= -1) {
+        return dp[n];
+    }
+    int ans = fibo_dp_topdown(n-1, dp) +
+              fibo_dp_topdown(n-2, dp);
+    dp[n] = ans;
+    
+    return ans;
+}
+  </code>
+  </pre>
+    </div>
+  </section>
+  </div>
+  
+  <div class="cpp-container"> 
+  <section  id="CoinChange" class="cpp-container cpp-card">
+   <div> 
+    <pre class='prettyprint lang-cpp'><code>
+  int coin_change_dp_bottomup(int amount, int* denomintions, int size) {
+    int *ways = new int[amount+1];
+    for(int i=0; i&lt; amount+1; i++) {
+        ways[i] = 0;
+    }
+    ways[0] = 1;
+    for(int i=1; i&lt;size; i++) {
+        for(int j=1; j&lt;amount+1; j++) {
+            if( denomintions[i] &lt;= j ) {
+                ways[j] = ways[j] + ways[j-denomintions[i]];
+            }
+        }
+    }
+    int ans = ways[amount];
+    delete [] ways;
+    return ans;
+};
+
+int coin_change_dp_topdown(int amount, int* denomintions, int size, int** output) {
+    if(amount == 0)
+        return 1;
+    
+    if(amount &lt; 0)
+        return 0;
+    
+    if(size == 0)
+        return 0;
+    
+    if(output[amount][size] &gt; -1)
+        return output[amount][size];
+    
+    int option1 = coin_change_dp_topdown(amount-denomintions[0],denomintions,size,output);
+    int option2 = coin_change_dp_topdown(amount, denomintions+1, size-1, output);
+    output[amount][size] = option1 + option2;
+    
+    return option1 + option2;
+}
+
+int coin_change(int amount, int* denomintions, int size) {
+    
+    if(amount == 0)
+        return 1;
+    
+    if(amount &lt; 0)
+        return 0;
+    
+    if(size == 0)
+        return 0;
+    /*
+     option1: choose first denomination
+     option2: don't choose first denomination
+     */
+    int option1 = coin_change(amount-denomintions[0],denomintions, size);
+    int option2 = coin_change(amount, denomintions+1, size-1);
+    return option1 + option2;
+}
+  </code>
+  </pre>
+    </div>
+  </section>
+  </div>
 </body>
   
 </html>
