@@ -58,3 +58,14 @@
   border-radius: .2rem;
   align-items: center;
 }
+
+@media(max-width: 1400px) {
+  .cpp-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cpp-card:first-child {
+    margin-bottom: 3rem;
+  }
+}
