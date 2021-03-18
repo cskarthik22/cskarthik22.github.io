@@ -48,14 +48,14 @@
      </div>
      <ul class="navigation-list">
        <li class="navigation-item"><a href="#" class="navigation-link"> home </a></li>
-       <li class="navigation-item"><a href="#Sorting" class="navigation-link"> Sorting </a></li>
+       <li class="navigation-item"><a href="#" class="navigation-link"> Sorting </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Divide-Conquer </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Greedy </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Backtracking </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Recursion </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> DP (Bitmask) </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Graphs </a></li>
-       <li class="navigation-item"><a href="#" class="navigation-link"> contact </a></li>
+       <li class="navigation-item"><a href="#Others" class="navigation-link"> Links </a></li>
      </ul>
      
      <div class="copyright">
@@ -78,6 +78,18 @@
     <div class="container card1"><a href="#Combinations" class="navigation-link"> Combinations </a></div>
     <div class="container card1"><a href="#Func-Pointers" class="navigation-link"> Func-Pointers </a></div>
     <div class="container card1"><a href="#Reverse" class="navigation-link"> Reverse </a></div>
+    <div class="container card1"><a href="#Stack" class="navigation-link"> Stack </a></div>
+    <div class="container card1"><a href="#Queue" class="navigation-link"> Queue </a></div>
+    <div class="container card1"><a href="#Strings" class="navigation-link"> Strings </a></div>
+    <div class="container card1"><a href="https://github.com/cskarthik22/howtheysre" class="navigation-link"> SRE </a></div>
+    <div class="container card1"><a href="https://github.com/cskarthik22/netshoot" class="navigation-link"> Netshoot </a></div>
+    <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-in-competitive-programming" class="navigation-link"> DP-1 </a></div>
+    <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-part-2" class="navigation-link"> DP-2 </a></div>
+    <div class="container card1"><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" class="navigation-link"> FFT </a></div>  
+    <div class="container card1"><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" class="navigation-link"> FFT </a></div>  
+      <div class="container card1"><a href="https://github.com/cskarthik22/coding-interview-university" class="navigation-link"> Others </a></div>
+       <div class="container card1"><a href="https://github.com/cskarthik22/Notes/blob/master/Books/big-o-cheatsheet.pdf" class="navigation-link"> DS </a></div>
+      
       
   </div>
     <div class="brand">
@@ -564,7 +576,14 @@ output:
   <section  id="Permutations" class="cpp-container cpp-card">
     <pre class='prettyprint lang-cpp'><code>
   
-// Program to permute a given string
+// Program to permute a given string 
+
+/*    
+ Permutations: Deals with selection + arrangement.
+ Example: select 11 out of 20 players in a cricket team and also decide batting arrangement.
+ Answer: nPr => nCr * r! ==> n!/(n-r)!
+*/
+
 #include &lt;stdio.h>
 #include &lt;stdlib.h>
 
@@ -723,6 +742,12 @@ int main()
   <div class="cpp-container"> 
   <section  id="Combinations" class="cpp-container cpp-card">
     <pre class='prettyprint lang-cpp'><code>
+/*
+   Combination: Deals with only selection.
+   Example: select 11 out of 20 players in a cricket team
+   Answer: nCr => n!/((n-r)!*r!) => 20C11
+*/
+
 #include &lt;stdio.h>
 
 static int count=0;
@@ -846,6 +871,313 @@ int main()
 
   </code>
   </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Stack" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+typedef struct Node_Block {
+    int data;
+    struct Node_Block *link;
+} node;
+
+node *TOP = NULL;
+
+void push(int item) {
+    // Create a new node
+    node *temp = (node *)malloc(sizeof(node));
+    temp->data = item;
+    temp->link = NULL;
+    
+    if ( TOP == NULL ) {
+       TOP = temp;
+       return;
+    } 
+    temp->link = TOP;
+    TOP = temp;
+}
+
+void pop() {
+    node *temp;
+    if ( TOP == NULL ) {
+        printf(" Stack is empty \n");
+        return;
+    } 
+    temp = TOP;
+    TOP=TOP->link;
+    free(temp);
+}
+
+void display() {
+    node *inode = TOP;
+    printf("[ TOP ] => ");
+    while(inode) {
+        printf("[ %d ] =>", inode->data);
+        inode=inode->link;
+    }
+}
+
+void print_top() {
+    printf("%d", TOP->data);
+}
+
+int main()
+{
+    printf("\n\t MENU: 1) PUSH 2) POP 3) TOP 4) Display 5) Exit \n");
+    int ch;
+    int item;
+   
+    do {
+        printf("enter your choice(1-5): ");
+        scanf("%d",&ch);
+        
+        switch(ch) {
+            case 1:
+                printf("\n Enter data : ");
+                scanf("%d", &item);
+                push(item);
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                print_top();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                // Free All nodes ( clear heap memory)
+                while(TOP) {
+                    node* temp = TOP;
+                    TOP = TOP->link;
+                    free(temp);
+                    printf("Memory - Cleared \n");
+                }
+                exit(0);
+                
+            default:
+                printf(" Wrong choice ;\n");
+                break;
+            
+        }
+        
+    
+    } while( ch != 5);
+
+    return 0;
+}
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Queue" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+typedef struct Node_Block {
+    int data;
+    struct Node_Block *link;
+} node;
+
+node *FRONT, *REAR = NULL;
+
+void Enqueue(int item) {
+    
+    node *temp = (node *)malloc(sizeof(node));
+    temp->data = item;
+    temp->link=NULL;
+    
+    if( REAR == NULL) {
+        FRONT = REAR = temp; 
+        return;
+    }
+    REAR->link=temp;
+    REAR = temp;
+    return;
+}
+
+void Dequeue(){
+    if( (FRONT==NULL) && (REAR==NULL) ) {
+        printf("Queue is empty...");
+    } else 
+    if ( FRONT==REAR ) {
+        free(FRONT);
+        FRONT=REAR=NULL;
+    } else {
+        node *temp = FRONT;
+        FRONT=FRONT->link;
+        free(temp);
+    }
+    
+}
+
+void Display(){
+    node *seeknode = FRONT;
+    printf("[ FRONT ] => ");
+    while(seeknode) {
+        printf("[ %d ] => ", seeknode->data);
+        seeknode = seeknode->link;
+    }
+    printf("[ REAR ] => ");
+}
+
+void Is_Empty(){
+    
+}
+
+void main(){
+    
+    int ch, item;
+    node *temp;
+    printf("\n\t MENU 1) Enqueue 2) Dequeue 3) Is_Empty 4) Display 5) Exit... ");
+    do {
+        printf("\n Enter choice ");
+        scanf("%d", &ch);
+        switch(ch) {
+            case 1:
+                printf("\nEnter item ");
+                scanf("%d", &item);
+                Enqueue(item);
+                break;
+            case 2:
+                Dequeue();
+                break;
+            case 3:
+                Is_Empty();
+                break;
+            case 4:
+                Display();
+                break;
+            case 5:
+                // Free All nodes ( clear heap memory)
+                
+                while(FRONT) {
+                    temp = FRONT;
+                    FRONT = FRONT->link;
+                    free(temp);
+                    printf("Memory-Cleared\n");
+                }
+                exit(0);
+            
+        }
+    
+    } while(ch != 5);
+    
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Strings" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+void swap(char *a, char *b) {
+// with out temp variable using bitwise XOR operation.
+    *a = *a^*b;
+    *b = *a^*b;
+    *a = *a^*b;
+}
+
+void swapUsingTemp(char *a, char *b) {
+    char t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void strReverse( char *s) {
+    int i=0, j=strlen(s)-1;
+    
+    while(i &lt; j) {
+        swap(&s[i], &s[j]);
+        //swapUsingTemp(&s[i], &s[j]);
+        i++;
+        j--;
+    }
+    printf("\nReverse = %s ", s);
+}
+
+void strReverse01( char *s) {
+    for(int i=0, j=strlen(s)-1;i &lt; j; i++,j--) 
+       swap(&s[i], &s[j]);
+    
+    printf("\nReverse01 = %s ", s);
+}
+
+void findlength (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0'; i++);
+
+  printf ("length of %s is %d", s, i);
+}
+
+void strUpper (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0' && (s[i] >= 97 && s[i] &lt;= 122); i++)
+    {
+      // if( s[i] >= 97 && s[i] &lt;=122) {
+      s[i] = s[i] - 32;
+      //  }
+    }
+  printf ("\nUpper = %s", s);
+}
+
+void strLower (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0'; i++)
+    {
+      if (s[i] >= 65 && s[i] &lt;= 90)
+	{
+	  s[i] = s[i] + 32;
+	}
+    }
+  printf ("\nLower = %s ", s);
+}
+
+char* substr(char *str,int pos,int n){
+    char *s = (char *)malloc(n*sizeof(char));
+    for(int i=pos;str[i]!='\0';i++)
+       s[i-pos]=str[i];
+  return s;
+}
+
+void main ()
+{
+
+  char str1[] = "weLcome";
+
+  findlength (str1);
+  strUpper (str1);
+  strLower (str1);
+  strReverse(str1);
+
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  
+  <div> 
+   <section  id="Others">
+      <ul class="navigation-list">
+       <li class="navigation-item"><a href="https://www.openculture.com/computer_science_free_courses" class="navigation-link"> Computer_science_free_courses </a></li>
+        <li class="navigation-item"><a href="https://www.mulesoft.com/resources/api/what-is-an-api" class="navigation-link"> what-is-an-api </a></li>
+     </ul>
+  
   </section>
   </div>
   
