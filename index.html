@@ -127,7 +127,7 @@
   
   <div class="cpp-container"> 
   <section  id="Fibonacci" class="cpp-container cpp-card">
-    <pre class='prettyprint lang-cpp'><code>
+    <pre class='prettyprint lang-cpp'>
   // #1: Fibonacci
   
  int fibo(int n) {
@@ -167,13 +167,13 @@ int fibo_dp_topdown(int n, int* dp) {
     
     return ans;
 }
-  </code>
+ 
   </pre>
   </section>
   </div>
   <div class="cpp-container"> 
   <section  id="CoinChange" class="cpp-container cpp-card">
-    <pre class='prettyprint lang-cpp'><code>
+    <pre class='prettyprint lang-cpp'>
   int coin_change_dp_bottomup(int amount, int* denomintions, int size) {
     int *ways = new int[amount+1];
     for(int i=0; i&lt; amount+1; i++) {
@@ -230,7 +230,7 @@ int coin_change(int amount, int* denomintions, int size) {
     int option2 = coin_change(amount, denomintions+1, size-1);
     return option1 + option2;
 }
-  </code>
+ 
   </pre>
   </section>
   </div>
