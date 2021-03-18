@@ -1,12 +1,12 @@
 .header {
   margin-left: 8rem;
   height: 100vh;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,.2)),url(https://www.komando.com/wp-content/uploads/2018/11/dreamstime_m_87808373.jpg) center no-repeat;
+  background: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,.2)),url(https://www.komando.com/wp-content/uploads/2018/11/dreamstime_m_87808373.jpg) center no-repeat;
   background-size: cover;
 }
 
 .container {
-  margin-left: 8rem;
+  margin-left: 0rem;
   margin-top: .1rem;
   padding: .5rem 0;
   background-color: rgba(255,255,255,.1);
@@ -27,19 +27,19 @@
 }
 
 .card1 {
-  padding: .5em;
-  margin: .2em;
-  font-size: 2em;
+  padding: .2em;
+  margin: .1em;
+  font-size: 3em;
   background-color: rgba(0,0,0,.4);
   color: #fff;
-  border-radius: 5rem;
+  border-radius: 0rem;
 }
 
 .cpp-container {
   margin-left: 8rem;
   margin-top: .1rem;
-  padding: .5rem 0;
-  background-color: rgba(255,255,255,.1);
+  padding: .1rem 0;
+  background-color: rgba(255,255,255,.1); 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@
 .cpp-card {
   padding: 0rem;
   margin: 0rem;
-  width: 500%;
+  width: 100%;
   font-size: 1rem;
   background-color: #333;
   color: #fff;
