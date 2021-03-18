@@ -1265,13 +1265,12 @@ void main ()
     <pre class='prettyprint lang-sh'><code>
 **************************************** LINUX BOOT PROCESS ***********************************
 
-1. Once Computer Starts, the BIOS on the mohter board checks all the input/output devices and the boot process 
-for the computer begins.
+1. BIOS on the mother board checks all the input/output devices and the boot process for the computer begins.
 2. The Boot process ( GRUB / other ) looks for a section of a hard drive ( Boot sector ) that contains the data to 
-load operating system. 
-3. This Boot loader then loads the linux Kernel.
-4. Linux Kernel then load the initial RAM disk, which contains a list of device drivers and then it starts to load 
-the computer drives to eventually mount the file system from the hard disk.
+   load operating system. 
+3. Boot loader -> loads the linux Kernel.
+4. Linux Kernel -> load the initial RAM disk, which contains a list of device drivers and then it starts to load 
+   the computer drives to eventually mount the file system from the hard disk.
 5. After the kernel is all setup and ready to to go, it then starts the initialization system
 
 Various Initialization Systems are...
