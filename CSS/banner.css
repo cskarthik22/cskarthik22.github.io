@@ -57,6 +57,8 @@
   color: #fff;
   border-radius: .2rem;
   align-items: center;
+  flex-basis: 0; 
+  flex-grow: 1;
 }
 
 @media(max-width: 1400px) {
