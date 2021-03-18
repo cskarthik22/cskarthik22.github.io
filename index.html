@@ -85,11 +85,16 @@
     <div class="container card1"><a href="https://github.com/cskarthik22/netshoot" class="navigation-link"> Netshoot </a></div>
     <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-in-competitive-programming" class="navigation-link"> DP-1 </a></div>
     <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-part-2" class="navigation-link"> DP-2 </a></div>
-    <div class="container card1"><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" class="navigation-link"> FFT </a></div>  
+    <div class="container card1"><a href="https://www.youtube.com/watch?v=P8Xa2BitN3I" class="navigation-link"> DP-3 </a></div>
+      
     <div class="container card1"><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" class="navigation-link"> FFT </a></div>  
       <div class="container card1"><a href="https://github.com/cskarthik22/coding-interview-university" class="navigation-link"> Others </a></div>
        <div class="container card1"><a href="https://github.com/cskarthik22/Notes/blob/master/Books/big-o-cheatsheet.pdf" class="navigation-link"> Big-O </a></div>
       <div class="container card1"><a href="https://www.youtube.com/watch?v=JnJq3Py0dyM&t=176s" class="navigation-link"> Entropy </a></div>
+      <div class="container card1"><a href="#NQueens" class="navigation-link"> NQueens </a></div>
+      <div class="container card1"><a href="https://medium.com/basecs/tagged/data-structures" class="navigation-link"> basecs </a></div>
+      <div class="container card1"><a href="#Bash" class="navigation-link"> Bash </a></div>
+      
           
   </div>
     <div class="brand">
@@ -1170,7 +1175,262 @@ void main ()
   </pre>
   </section>
   </div>
-  
+  <div class="cpp-container"> 
+  <section  id="NQueens" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#define SIZE 4
+
+void printSolution(int board[SIZE][SIZE]) {
+    int i,j;
+    printf("=======SOL========\n");
+    for (i = 0; i &lt; SIZE; i++)
+    {
+        for (j = 0; j &lt; SIZE; j++)
+           printf(" %d ", board[i][j]);
+        printf("\n");
+    }
+    printf("=================\n");
+}
+
+int isSafe(int board[SIZE][SIZE],int row, int col) {
+    /*
+     \
+      \
+    ___\(i,j)
+      /
+    /
+    
+    */
+    int i,j;
+    for (j=0; j &lt;col; j++) {
+        if(board[row][j])
+          return 0;
+    }
+    for (i=row, j=col; i>=0 && j>=0; i--,j--)
+        if(board[i][j])
+          return 0;
+    for (i=row, j=col; j>=0 && i&lt;SIZE; i++,j--)
+        if(board[i][j])
+          return 0;
+    return 1;
+} 
+
+void solveNQueen(int board[SIZE][SIZE], int col) {
+    
+    // BASE CASE
+    if (col >= SIZE) {
+        printSolution(board);
+        
+    } else {
+        
+        for(int row=0;row&lt;SIZE;row++) {
+        
+            if (isSafe(board,row,col)) {
+                
+                //CHOOSE
+                board[row][col] = 1;
+                
+                //EXPLORE
+                solveNQueen(board, col+1);
+                
+                //UNCHOOSE
+                board[row][col] = 0;
+            }
+        }
+        
+    }
+    
+}
+
+void main ()
+{
+    int board[SIZE][SIZE] = {0};
+
+    solveNQueen(board,0);
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Bash" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-sh'><code>
+**************************************** LINUX BOOT PROCESS ***********************************
+
+1. Once Computer Starts, the BIOS on the mohter board checks all the input/output devices and the boot process 
+for the computer begins.
+2. The Boot process ( GRUB / other ) looks for a section of a hard drive ( Boot sector ) that contains the data to 
+load operating system. 
+3. This Boot loader then loads the linux Kernel.
+4. Linux Kernel then load the initial RAM disk, which contains a list of device drivers and then it starts to load 
+the computer drives to eventually mount the file system from the hard disk.
+5. After the kernel is all setup and ready to to go, it then starts the initialization system
+
+Various Initialization Systems are...
+init --> upstart --> systemd 
+
+Systemd is the most popular one.
+
+init/upstart relies on bash shell scripts, but systemd replaced all the exisiting fucntionality with pre-compiled 'C' code.
+Advandtages of systemd:
+1) Socket activation
+2) parallel execution
+
+Linux Kernel has a concept, which manages all the system resources in a hierarchial grouping & labeling called
+Control Groups (Cgroups)
+Each Cgroups - Limits the use of the system resources ( CPU, RAM ..etc )
+Each Namespace - Limits the view of the processes , creating a logical isolated boundary.
+
+Systemd took advantage of Cgroups & grouped all its processes together into their own type of Cgroups, which has its own slice 
+of resource pie
+
+Systemd manages the units of services grouped together approproately names slices
+
+systemd-cgls
+systemd-cgtop
+
+systemctl
+systemctl status httpd.service
+systemctl enable httpd.service
+systemclt disable httpd.service
+systemctl is-enabled httpd.servoce
+systemctl help httpd.service
+systemctl start httpd.service
+systemctl stop httpd.service
+systemctl cat httpd.service
+systemctl mask httpd.service
+systemctl unmask httpd.service
+systemctl -H 198.0.0.1 status httpd.service
+systemctl daemon-reload
+systemctl list-unit-files
+systemd-delta
+systemctl edit --full &lt;unit>
+
+systemd journal
+
+journalctl 
+journalctl -r
+journalctl -o verbose
+journalctl -o json-pretty
+echo " hello... " | systemd-cat
+journalctl -r
+journalctl -f
+journalctl -n 20
+journalctl -k ### kernal logs
+journalctl --disk-usage
+
+hostnamectl
+timedatectl
+localectl
+systemd-analyse
+
+
+systemd-inhibit wget http://example.com/abc.iso   ### prevents system from sleeping until it downloads huge file.
+
+/etc/fstab
+df -Th
+lsblk
+
+
+lsmod # list kernal modules
+lscpu # displays cpu architecture
+lspci
+lsblk
+lsusb
+lsdev
+
+
+#### Special Characters
+
+su root -  ( ### '-' at the end will make sure all the configuration settings applied to switch user root )
+/bin/false && echo 'it wont print'
+/bin/true && echo ' now it prints'
+/bin/true || echo 'it wont print'
+/bin/false || echo 'it prints'
+/bin/false; echo 'prints whatever'
+\\ \$ ( ### escape characters )
+### return codes 0-true, 1 -false
+echo $?
+ls -al | more  ( ### '|' pipe symbol gives pagination)
+ls -al > output.txt ( ### redirects output to a file )
+
+###### Environment Variables
+
+set | more
+env | more
+shopt
+export MYPATH = /home/user
+echo $MYPATH
+history
+
+
+###### Processing texts
+https://github.com/linuxacademy1/textfiles
+
+sort numbers.txt
+sort -n numbers.txt
+sort -k2 -n numbers.txt ( ### sort second column in the text file )
+cat numbers.txt
+nl numbers.txt ( ### like cat it dispalys contents with line numbers exluding blank lines )
+nl -ba numbers.txt ( ## number blank lines)
+wc -l /etc/passwd ( ### number of lines in a file )
+wc -w /etc/passwd ( ### number of words )
+wc -c /etc/passwd ( ### number of characters )
+expand -t 10 tabs.txt ( ### 10 spaces between each column )
+cut -c 1-5 columns.txt
+cut -d: -f 1,2,4 columns.txt
+cut -d" " -f 1,2 columns.txt  ( ### tab is default delimeter no need to mention )
+paste file1.txt file2.txt
+join file1.txt file2.txt ( ### only has unique values)
+uniq lines.txt
+uniq -d lines.txt  ( ### print only duplicate unique lines )
+uniq -D lines.txt ( ### print only duplicate lines 
+head /var/log/messages ( ### displays first 10 lines )
+head -n 15 /var/log/messages
+tail /var/log/messages
+tail -n 15 /var/log/messages
+tail -f /var/log/messages ( with updates automatically )
+cat tabs.txt
+tac tabs.txt ( ### displays content in reverse )
+split lines.txt
+split -b 512 lines.txt  ( ### 512 bytes in each file)
+split -k 512 lines.txt  ( ### 512 kilobytes in each file)
+split -l 10 lines.txt ( ### 10 lines in each file - xaa.txt)
+split -a 3 -l 10 lines.txt ( ### output file name xaaa.txt)
+od telnet.rpm ( ### displays binary file in octal format, other formats -b , -o, -x, -d, -f)
+pr lines.txt ( ### prints the contents of the file to terminal )
+pr --columns=2 lines.txt ( ### prints in 2 columns )
+
+tr 'a' 'A' &lt; lines.txt ( ### translate command replaces a with A , but we cant use tr to replace entire word)
+tr 'a-e' 'A-E' &lt; lines.txt 
+
+To replace entire word we use SED unility
+sed 's/the/THE/g' sedexamples.txt ( ### substitiutes the with THE globally across the file )
+sed 's/the/THE/' sedexamples.txt ( ###replaces only first instance in each line not globally )
+sed -e 's/the/NOW/g' -e 's/NOW/NEVER/g' sedexamples.txt ( ### multiple commands in a single line )
+vim sedopts.txt
+s/the/THE/g
+s/THE/NOW/g
+s/NOW/NEVER/g
+
+sed -f sedopts.txt sedexamples.txt
+more lines.txt ( displays content page wise using tab space and it allows only forward)
+less lines.txt ( f forward b for backword)
+
+
+Basic File Management
+ls -l /etc
+ls -al /etc
+ls -d ( lists the directories)
+mkdir -p mydir/dir1/dir2/dir3 ( creates all sub directories)
+file /etc/* ( diplays file types information )
+
+  </code>
+  </pre>
+  </section>
+  </div>
   <div> 
    <section  id="Others">
       <ul class="navigation-list">
