@@ -1,29 +1,37 @@
+<!-- https://github.com/googlearchive/code-prettify -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/4149d0e55a.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="CSS/style.css" rel="stylesheet" />
+  <link href="CSS/banner.css" rel="stylesheet" />
+  <link href="CSS/cube.css" rel="stylesheet" />
+  <link href="CSS/desert.css" rel="stylesheet" />
   
   <title>Competitve Programming</title>
   </head>
 <body>
 
  <div class="navbar">
+   <input type=checkbox id="click" class="checkbox" hidden>
    <div class="sidebar">
-      <div class="menu-icon">
-        <div class="line line-1"></div>
-        <div class="line line-2"></div>
-        <div class="line line-3"></div>
-     </div>
+     <label for="click">
+        <div class="menu-icon">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+       </div>
+     </label>
      <ul class="social-media-list">
-       <li> <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-       <li> <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-       <li> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-       <li> <a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+       <li> <a href="https://www.facebook.com/karthik.kaluvala.1/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+       <li> <a href="https://linkedin.com/in/cskarthik22" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+       <li> <a href="https://twitter.com/cskarthik22" class="social-link"><i class="fab fa-twitter"></i></a></li>
+       <li> <a href="https://www.instagram.com/cskarthik22" class="social-link"><i class="fab fa-instagram"></i></a></li>
  
      </ul>
    </div>
@@ -47,7 +55,7 @@
        <li class="navigation-item"><a href="#" class="navigation-link"> Recursion </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> DP (Bitmask) </a></li>
        <li class="navigation-item"><a href="#" class="navigation-link"> Graphs </a></li>
-       <li class="navigation-item"><a href="#" class="navigation-link"> contact </a></li>
+       <li class="navigation-item"><a href="#Others" class="navigation-link"> Links </a></li>
      </ul>
      
      <div class="copyright">
@@ -55,6 +63,1384 @@
      </div>
    </nav>
  </div>
+ 
+  <header class="header">
+    <div class="container">
+    <div class="container card1"><a href="#Fibonacci" class="navigation-link"> Fibonacci </a></div>
+    <div class="container card1"><a href="#CoinChange" class="navigation-link"> CoinChange </a></div>
+    <div class="container card1"><a href="#LIS" class="navigation-link"> LIS </a></div>
+    <div class="container card1"><a href="#HeapSort" class="navigation-link"> HeapSort </a></div>
+    <div class="container card1"><a href="#MergeSort" class="navigation-link"> MergeSort </a></div>
+    <div class="container card1"><a href="#STL" class="navigation-link"> STL </a></div>
+    <div class="container card1"><a href="#Star" class="navigation-link"> Star </a></div>
+    <div class="container card1"><a href="#Parenthesis" class="navigation-link"> Parenthesis </a></div>
+    <div class="container card1"><a href="#Permutations" class="navigation-link"> Permutations </a></div>
+    <div class="container card1"><a href="#Combinations" class="navigation-link"> Combinations </a></div>
+    <div class="container card1"><a href="#Func-Pointers" class="navigation-link"> Func-Pointers </a></div>
+    <div class="container card1"><a href="#Reverse" class="navigation-link"> Reverse </a></div>
+    <div class="container card1"><a href="#Stack" class="navigation-link"> Stack </a></div>
+    <div class="container card1"><a href="#Queue" class="navigation-link"> Queue </a></div>
+    <div class="container card1"><a href="#Strings" class="navigation-link"> Strings </a></div>
+    <div class="container card1"><a href="https://github.com/cskarthik22/howtheysre" class="navigation-link"> SRE </a></div>
+    <div class="container card1"><a href="https://github.com/cskarthik22/netshoot" class="navigation-link"> Netshoot </a></div>
+    <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-in-competitive-programming" class="navigation-link"> DP-1 </a></div>
+    <div class="container card1"><a href="https://www.topcoder.com/thrive/articles/dynamic-programming-and-local-memoization-part-2" class="navigation-link"> DP-2 </a></div>
+    <div class="container card1"><a href="https://www.youtube.com/watch?v=P8Xa2BitN3I" class="navigation-link"> DP-3 </a></div>
+      
+    <div class="container card1"><a href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" class="navigation-link"> FFT </a></div>  
+      <div class="container card1"><a href="https://github.com/cskarthik22/coding-interview-university" class="navigation-link"> Others </a></div>
+       <div class="container card1"><a href="https://github.com/cskarthik22/Notes/blob/master/Books/big-o-cheatsheet.pdf" class="navigation-link"> Big-O </a></div>
+      <div class="container card1"><a href="https://www.youtube.com/watch?v=JnJq3Py0dyM&t=176s" class="navigation-link"> Entropy </a></div>
+      <div class="container card1"><a href="#NQueens" class="navigation-link"> NQueens </a></div>
+      <div class="container card1"><a href="https://medium.com/basecs/tagged/data-structures" class="navigation-link"> basecs </a></div>
+      <div class="container card1"><a href="#Bash" class="navigation-link"> Bash </a></div>
+      
+          
+  </div>
+    <div class="brand">
+    </div>
+  </header>
+  
+  <div class="cpp-container"> 
+  <section  id="Fibonacci" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  // #1: Fibonacci
+  
+ int fibo(int n) {
+    if( n==0 || n==1)
+        return 1;
+    return fibo(n-1) + fibo(n-2);
+ }
+
+ int fibo_dp_bottomup(int n) {
+    /* Effective space utilization, 
+    instead of array, just maintain
+     only 2 varaibles */
+    int first = 1;
+    int second = 1;
+    int ans = 0;
+    if (n==0 || n==1)
+        return 1;
+    for(int i=2; i&lt;=n; i++) {
+        ans = second + first;
+        first = second;
+        second = ans;
+    }
+    return ans;
+}
+
+int fibo_dp_topdown(int n, int* dp) {
+    // Memoization = Recursion + lookup table
+    if( n==0 || n==1) {
+        return 1;
+    }
+    if(dp[n]!= -1) {
+        return dp[n];
+    }
+    int ans = fibo_dp_topdown(n-1, dp) +
+              fibo_dp_topdown(n-2, dp);
+    dp[n] = ans;
+    
+    return ans;
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="CoinChange" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  int coin_change_dp_bottomup(int amount, int* denomintions, int size) {
+    int *ways = new int[amount+1];
+    for(int i=0; i&lt; amount+1; i++) {
+        ways[i] = 0;
+    }
+    ways[0] = 1;
+    for(int i=1; i&lt;size; i++) {
+        for(int j=1; j&lt;amount+1; j++) {
+            if( denomintions[i] &lt;= j ) {
+                ways[j] = ways[j] + ways[j-denomintions[i]];
+            }
+        }
+    }
+    int ans = ways[amount];
+    delete [] ways;
+    return ans;
+};
+
+int coin_change_dp_topdown(int amount, int* denomintions, int size, int** output) {
+    if(amount == 0)
+        return 1;
+    
+    if(amount &lt; 0)
+        return 0;
+    
+    if(size == 0)
+        return 0;
+    
+    if(output[amount][size] &gt; -1)
+        return output[amount][size];
+    
+    int option1 = coin_change_dp_topdown(amount-denomintions[0],denomintions,size,output);
+    int option2 = coin_change_dp_topdown(amount, denomintions+1, size-1, output);
+    output[amount][size] = option1 + option2;
+    
+    return option1 + option2;
+}
+
+int coin_change(int amount, int* denomintions, int size) {
+    
+    if(amount == 0)
+        return 1;
+    
+    if(amount &lt; 0)
+        return 0;
+    
+    if(size == 0)
+        return 0;
+    /*
+     option1: choose first denomination
+     option2: don't choose first denomination
+     */
+    int option1 = coin_change(amount-denomintions[0],denomintions, size);
+    int option2 = coin_change(amount, denomintions+1, size-1);
+    return option1 + option2;
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="LIS" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  int LIS(int* inputarr, int size) {
+    int* lis_arr = new int[size];
+    for(int i=0; i&lt;size; i++)
+    lis_arr[i]=1;
+    
+    for(int i=1; i&lt;size; i++){
+        for(int j=0; j&lt;i; j++) {
+            if(inputarr[i]>inputarr[j] && lis_arr[i] &lt; lis_arr[j]+1) {
+                lis_arr[i] = lis_arr[j]+1;
+            }
+        }
+    }
+    int maxlength= 0;
+    for( int i=0; i&lt;size; i++) {
+        if(lis_arr[i] > maxlength) {
+            maxlength = lis_arr[i];
+        }
+    }
+    delete [] lis_arr;
+    return maxlength;
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="HeapSort" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  
+#include &lt;bits/stdc++.h>
+using namespace std;
+
+void swapfunc(vector&lt;pair&lt;double,string>> &vp, int large, int index) {
+    pair&lt;double, string> tp = vp[index];
+    vp[index] = vp[large];
+    vp[large] = tp;
+ }
+
+void MaxHeapify(vector&lt;pair&lt;double,string>> &vp, int index, int n) {
+    int left = 2*index+1;
+    int right = 2*index+2;
+    int large = index;
+    
+    if(left &lt; n && vp[left].first > vp[index].first) {
+        large = left;
+    } else {
+        large = index;
+    }
+    
+    if(right &lt; n && vp[right].first >vp[large].first) {
+        large = right;
+    }
+    if( large != index) {
+        swapfunc(vp, large, index);
+        MaxHeapify(vp, large, n);
+    }
+}
+
+void BuildMapHeap(vector&lt;pair&lt;double,string>> &vp, int n) {
+    for( int i=n/2-1; i>=0; i--) {
+        MaxHeapify(vp, i, n);
+    }
+}
+
+void HeapSort(vector&lt;pair&lt;double,string>> &vp, int n) {
+    
+    for( int i=n-1; i>0; i--) {
+        swapfunc(vp, 0, i);
+        MaxHeapify(vp, 0, i);
+    }
+}
+
+int main()
+{
+    vector&lt;pair&lt;double,string>> vp;
+    int n;
+    cin >> n;
+  
+    for( int i=0; i &lt;n; i++) {
+        double item;
+        string name;
+        cin >> item >> name;
+        pair&lt;double,string> p = make_pair(item, name);
+        vp.push_back(p);
+    }
+    
+    cout &lt;&lt; endl;
+    // 1 14 10 8 7 9 3 2 4 6
+    for(auto it = vp.begin(); it != vp.end(); it++){
+        cout &lt;&lt; (*it).first &lt;&lt; " - " &lt;&lt; (*it).second  &lt;&lt; endl;
+    }
+    BuildMapHeap(vp, n);
+    
+    //HeapSort(vp, n);
+    
+    cout &lt;&lt; " Max heap" &lt;&lt; endl;
+    
+    for(auto it = vp.begin(); it != vp.end(); it++){
+        cout &lt;&lt; (*it).first << " - " &lt;&lt; (*it).second  &lt;&lt; endl;
+    }
+
+    return 0;
+}
+/*
+5                    
+1 one                        
+4 four                        
+2 two                       
+5 five                       
+3 three
+*/
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="STL" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  
+#include &lt;stdio.h>
+#include &lt;iostream>
+#include &lt;vector>
+#include &lt;list>
+#include &lt;forward_list>
+#include &lt;stack>
+#include &lt;queue>
+#include &lt;deque>
+#include &lt;tuple>
+using namespace std;
+
+/*
+list - doublelinked list
+forward-list - single linked list
+*/
+
+void display(vector&lt;int> &v){
+    cout &lt;&lt; "vector display" &lt;&lt; endl;
+    auto it = v.begin();
+    while(it != v.end()){
+        cout &lt;&lt; *it &lt;&lt; " ";
+        it++;
+    }
+    cout &lt;&lt; endl;
+}
+
+void display_list(list&lt;int> &v){
+    cout &lt;&lt; "list display" &lt;&lt; endl;
+    list&lt;int>::iterator it;
+    it = v.begin();
+    while(it != v.end()){
+        cout &lt;&lt; *it &lt;&lt; " ";
+        it++;
+    }
+    cout &lt;&lt; endl;
+}
+
+void display_forard_list(forward_list&lt;int> &v){
+    cout &lt;&lt; "forward_list display" &lt;&lt; endl;
+    forward_list&lt;int>::iterator it;
+    it = v.begin();
+    while(it != v.end()){
+        cout &lt;&lt; *it &lt;&lt; " ";
+        it++;
+    }
+    cout &lt;&lt; endl;
+}
+
+int main()
+{
+    vector&lt;int> v = { 1,2,10,23,12 };
+    v.push_back(25);
+    display(v);
+    v.pop_back();
+    display(v);
+    
+    list&lt;int> l = { 1,2,10,23,12 };
+    l.push_back(25);
+    display_list(l);
+    
+    forward_list&lt;int> fl = { 1,2,10,23,12 };
+    fl.push_front(25);
+    display_forard_list(fl);
+    
+    
+    stack&lt;int> s;
+    s.push(100);
+    s.push(200);
+    s.push(250);
+    while(!(s.empty())) {
+        cout &lt;&lt; s.top() &lt;&lt; " ";
+        s.pop();
+    }
+    cout &lt;&lt; endl;
+    
+    queue&lt;int> q;
+    q.push(100);
+    q.push(200);
+    q.push(250);
+    while(!(q.empty())){
+        cout &lt;&lt; q.front() &lt;&lt; " ";
+        q.pop();
+    }
+    cout &lt;&lt; endl;
+    
+    pair&lt;int,string> p;
+    p = make_pair(10, "john");
+    cout &lt;&lt; p.first &lt;&lt; p.second &lt;&lt; endl;
+    
+    vector&lt;pair&lt;int,string>> vp;
+    vp.push_back(make_pair(1,"one"));
+    vp.push_back(make_pair(2,"two"));
+    vp.push_back(make_pair(3,"three"));
+    
+    for(auto it = vp.begin(); it != vp.end(); it++){
+        cout &lt;&lt; (*it).first &lt;&lt; " " &lt;&lt; (*it).second &lt;&lt; endl;
+    }
+    
+    tuple&lt;int, string, int> t;
+    t = make_tuple(10, "john", 35);
+    cout &lt;&lt; get&lt;0>(t) &lt;&lt; " " &lt;&lt; get&lt;1>(t) &lt;&lt; " " &lt;&lt; get&lt;2>(t) &lt;&lt; endl;
+    
+    vector&lt;tuple&lt;int,string,int>> vt;
+    vt.push_back(make_tuple(10, "john", 35));
+    vt.push_back(make_tuple(20, "mike", 55));
+    vt.push_back(make_tuple(30, "carl", 45));
+    
+    for(auto it=vt.begin(); it!=vt.end(); it++){
+        cout &lt;&lt; get&lt;0>(*it) &lt;&lt; " " &lt;&lt; get&lt;1>(*it) &lt;&lt; " " &lt;&lt; get&lt;2>(*it) &lt;&lt; endl;
+    }
+    
+    priority_queue&lt;pair&lt;int,string>> pq;
+    pq.push(make_pair(10,"john"));
+    pq.push(make_pair(30,"carl"));
+    pq.push(make_pair(20,"mike"));
+    
+    while(!(pq.empty())){
+        cout &lt;&lt; pq.top().first &lt;&lt; " " &lt;&lt; pq.top().second &lt;&lt; endl;
+        pq.pop();
+    }
+    
+    return 0;
+}
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="MergeSort" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+void Merge(int *arr, int low, int mid, int high) {
+    int n1 = mid - low + 1;
+    int n2 = high - mid;
+    
+    int arr1[n1],arr2[n2];
+    int i,j,k=0;
+    
+    for(i=0;i&lt;n1;i++)
+       arr1[i]=arr[low+i];
+    for(j=0;j&lt;n2;j++)
+      arr2[j]=arr[mid+1+j];
+      i=0;
+      j=0;
+      k=low;
+      while(i&lt;n1 && j&lt;n2) {
+          if(arr1[i]&lt;=arr2[j]) 
+              arr[k++]=arr1[i++];
+          else 
+              arr[k++] = arr2[j++];
+      }
+      while(i&lt;n1){
+          arr[k++] = arr1[i++];
+      }
+      while(j&lt;n2){
+          arr[k++] = arr2[j++];
+      }
+    //printf("done...");
+}
+
+void MergeSort(int *arr,int low, int high){
+    int mid; 
+    if(low&lt;high) {
+        mid = low + (high-low)/2;
+        MergeSort(arr,low,mid);
+        MergeSort(arr,mid+1,high);
+        Merge(arr,low,mid,high);
+    }
+}
+
+void Display(int *arr){
+    for(int i=0;arr[i]!=NULL;i++)
+        printf("%d ",arr[i]);
+}
+int main()
+{
+    int A[]={1,14,10,8,7,9,3,2,4,6};
+    int arrlen = sizeof(A)/sizeof(int);
+    Display(&A);
+    printf("\n");
+    MergeSort(&A,0,arrlen-1);
+    Display(&A);
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Star" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+
+int main()
+{
+    int n=10;
+    
+    for(int i=1; i&lt;=n;i++){
+        int spaces = n-i;
+        for(int j = 1; j&lt;=2*spaces; j++) printf(" "); //first in row
+        for(int j = 1; j&lt;=i; j++) printf("   A"); // middle in row
+        for(int j = 1; j&lt;=2*spaces; j++) printf(" "); // last in row
+        printf("\n");
+    }
+    for(int i=n-1; i>=1;i--){
+        int spaces = n-i;
+        for(int j = 1; j&lt;=2*spaces; j++) printf(" ");
+        for(int j = 1; j&lt;=i; j++) printf("   A");
+        for(int j = 1; j&lt;=2*spaces; j++) printf(" ");
+        printf("\n");
+    }
+    
+
+    return 0;
+}
+
+/*
+output:
+
+                     A                                                                                                                                           
+                   A   A                                                                                                                                         
+                 A   A   A                                                                                                                                       
+               A   A   A   A                                                                                                                                     
+             A   A   A   A   A                                                                                                                                   
+           A   A   A   A   A   A                                                                                                                                 
+         A   A   A   A   A   A   A                                                                                                                               
+       A   A   A   A   A   A   A   A                                                                                                                             
+     A   A   A   A   A   A   A   A   A                                                                                                                           
+   A   A   A   A   A   A   A   A   A   A                                                                                                                         
+     A   A   A   A   A   A   A   A   A                                                                                                                           
+       A   A   A   A   A   A   A   A                                                                                                                             
+         A   A   A   A   A   A   A                                                                                                                               
+           A   A   A   A   A   A                                                                                                                                 
+             A   A   A   A   A                                                                                                                                   
+               A   A   A   A                                                                                                                                     
+                 A   A   A                                                                                                                                       
+                   A   A                                                                                                                                         
+                     A                                             
+*/
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Permutations" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+  
+// Program to permute a given string 
+
+/*    
+ Permutations: Deals with selection + arrangement.
+ Example: select 11 out of 20 players in a cricket team and also decide batting arrangement.
+ Answer: nPr => nCr * r! ==> n!/(n-r)!
+*/
+
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int count=0;
+char letters[] = "abc";
+int *visited;
+void permuatations(char *str, int start, int end)
+{
+    if(start == end) {
+        printf("%s ", str);
+        count++;
+    } else {
+        for(int i=0;i&lt;strlen(letters); i++) {
+            if(visited[i]==0) {
+                str[start] = letters[i];
+                visited[i] = 1;
+                permuatations(str, start+1, end);
+                visited[i] = 0;
+                str[start] = '\0';
+            }
+        }
+    }
+}
+
+void main() {
+    int n=sizeof(letters);
+    char *input = (char*)calloc(n,sizeof(char));
+    visited = (int *)calloc(n,sizeof(int));
+    permuatations(input,0,n-1);
+    printf("\nTotal permuatations = %d", count);
+}
+
+/* OUTPUT
+abc acb bac bca cab cba                                                                                                                                                                     
+Total permuatations = 6
+*/
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Parenthesis" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+// Generate all valid parenthesis
+#include &lt;stdio.h>
+#include &lt;bits/stdc++.h>
+using namespace std;
+
+void genparenthesis(int n, int open, int close, string output){
+    if(output.size()==2*n)
+       cout &lt;&lt; output &lt;&lt; endl;
+    
+    if(open&lt;n)
+       genparenthesis(n,open+1,close, output + "(");
+       
+    if(close&lt;open)
+       genparenthesis(n,open,close+1, output + ")");
+    
+}
+
+int main()
+{
+  genparenthesis(3,0,0,"");
+  return 0;
+}
+
+/* OUTPUT:
+          ((()))       
+          (()())                        
+          (())()                       
+          ()(())                        
+          ()()()
+
+*/
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Func-Pointers" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+typedef void (*Funstr)(char *);
+
+void strLength(char *s) { 
+  int i;
+  for (i = 0; s[i] != '\0'; i++);
+  printf ("strLength = %d", i);
+}
+
+void strUpper(char *s) {
+  for (int i = 0; s[i] != '\0'; i++) {
+    if (s[i] >= 97 && s[i] &lt;= 122) {
+       s[i] = s[i] - 32;
+    }
+  }
+  printf ("\nUpper = %s", s);
+}
+
+void strLower(char *s) { 
+  for (int i = 0; s[i] != '\0'; i++) {
+    if (s[i] >= 65 && s[i] &lt;= 90) {
+	   s[i] = s[i] + 32;
+	}
+  }
+  printf ("\nLower = %s ", s);
+}
+
+void swap(char *a, char *b) {
+    *a = *a ^ *b;
+    *b = *a ^ *b;
+    *a = *a ^ *b;
+}
+
+void strReverse(char *s) {
+    
+    for(int i=0,j=strlen(s)-1;i&lt;j;i++,j--)
+       swap(&s[i], &s[j]);
+    printf ("\nReverse = %s ", s);
+}
+
+void IsPalindrome(char *s) {
+    for(int i=0,j=strlen(s)-1;i&lt;j;i++,j--) {
+        if (s[i] != s[j]) {
+            printf("%s is not a palindrome");
+            return;
+        }
+    }
+    printf("\n%s is a palindrome", s);
+    
+}
+
+int main()
+{
+    char str1[] = "WeLcome" , str2[] = "madam";
+    
+    Funstr strOperations[] = { strLength, strUpper, strLower, strReverse, IsPalindrome };
+    strOperations[0](str1);
+    strOperations[1](str1);
+    strOperations[2](str1);
+    strOperations[3](str1);
+    strOperations[4](str1); strOperations[4](str2);
+    
+
+    return 0;
+}
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Combinations" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+/*
+   Combination: Deals with only selection.
+   Example: select 11 out of 20 players in a cricket team
+   Answer: nCr => n!/((n-r)!*r!) => 20C11
+*/
+
+#include &lt;stdio.h>
+
+static int count=0;
+void swap ( char *a, char *b)
+{
+    char temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void Combinations(char *str, int start, int end)
+{
+    int index;
+   
+    if(start == end)
+    {
+        printf("%s\n", str);
+        count++;
+    }
+    else
+    {
+        for(index = start;index&lt;=end;index++)
+        {
+         swap(&str[start],&str[index]);
+         Combinations(str, start+1, end);
+         swap(&str[start],&str[index]);
+         
+        }
+    }
+   
+}
+
+int main()
+{
+    
+    char input[] = "abc";
+    Combinations(input,0,strlen(input)-1);
+    printf("Total Combinations = %d", count);
+    
+    return 0;
+}
+
+/* OUTPUT:
+
+    abc                      
+    acb                          
+    bac                          
+    bca                          
+    cba                         
+    cab                                                                                                                                                              
+    Total Combinations = 6 
+
+*/
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Reverse" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+/*Reverese words in a given string */
+
+/*
+Algorithm
+=========
+
+step1: Reverse the individual words
+step2: Reverse the whole string from start to end
+*/
+
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+void reverse(char *start, char *end)
+{
+	char temp;
+	while(start &lt; end)
+	{
+		temp = *start;
+		*start++ = *end;
+		*end-- = temp;
+	}
+}
+
+void RevereseWords(char *str)
+{
+	char *wordBegin, *temp;
+	wordBegin = '\0';
+	temp = str;
+	//reverse the individual words
+	while(*temp)
+	{
+		if((wordBegin == '\0') && (*temp != ' '))
+			wordBegin = temp;
+		if(wordBegin && ((*(temp+1) == ' ') || (*(temp + 1) == '\0')))
+		{
+			reverse(wordBegin, temp);
+			wordBegin = '\0';
+		}
+		temp++;
+	}
+	//reverse the whole string from start to end
+	reverse(str, temp-1);
+}
+
+int main()
+{
+	char str[100] = "Welcome to Programming!!";
+
+	RevereseWords(str);
+	printf("%s\n", str);
+	return 0;
+}
+
+/* OUTPUT:
+
+   Programming!! to Welcome
+*/
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Stack" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+typedef struct Node_Block {
+    int data;
+    struct Node_Block *link;
+} node;
+
+node *TOP = NULL;
+
+void push(int item) {
+    // Create a new node
+    node *temp = (node *)malloc(sizeof(node));
+    temp->data = item;
+    temp->link = NULL;
+    
+    if ( TOP == NULL ) {
+       TOP = temp;
+       return;
+    } 
+    temp->link = TOP;
+    TOP = temp;
+}
+
+void pop() {
+    node *temp;
+    if ( TOP == NULL ) {
+        printf(" Stack is empty \n");
+        return;
+    } 
+    temp = TOP;
+    TOP=TOP->link;
+    free(temp);
+}
+
+void display() {
+    node *inode = TOP;
+    printf("[ TOP ] => ");
+    while(inode) {
+        printf("[ %d ] =>", inode->data);
+        inode=inode->link;
+    }
+}
+
+void print_top() {
+    printf("%d", TOP->data);
+}
+
+int main()
+{
+    printf("\n\t MENU: 1) PUSH 2) POP 3) TOP 4) Display 5) Exit \n");
+    int ch;
+    int item;
+   
+    do {
+        printf("enter your choice(1-5): ");
+        scanf("%d",&ch);
+        
+        switch(ch) {
+            case 1:
+                printf("\n Enter data : ");
+                scanf("%d", &item);
+                push(item);
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                print_top();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                // Free All nodes ( clear heap memory)
+                while(TOP) {
+                    node* temp = TOP;
+                    TOP = TOP->link;
+                    free(temp);
+                    printf("Memory - Cleared \n");
+                }
+                exit(0);
+                
+            default:
+                printf(" Wrong choice ;\n");
+                break;
+            
+        }
+        
+    
+    } while( ch != 5);
+
+    return 0;
+}
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Queue" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+typedef struct Node_Block {
+    int data;
+    struct Node_Block *link;
+} node;
+
+node *FRONT, *REAR = NULL;
+
+void Enqueue(int item) {
+    
+    node *temp = (node *)malloc(sizeof(node));
+    temp->data = item;
+    temp->link=NULL;
+    
+    if( REAR == NULL) {
+        FRONT = REAR = temp; 
+        return;
+    }
+    REAR->link=temp;
+    REAR = temp;
+    return;
+}
+
+void Dequeue(){
+    if( (FRONT==NULL) && (REAR==NULL) ) {
+        printf("Queue is empty...");
+    } else 
+    if ( FRONT==REAR ) {
+        free(FRONT);
+        FRONT=REAR=NULL;
+    } else {
+        node *temp = FRONT;
+        FRONT=FRONT->link;
+        free(temp);
+    }
+    
+}
+
+void Display(){
+    node *seeknode = FRONT;
+    printf("[ FRONT ] => ");
+    while(seeknode) {
+        printf("[ %d ] => ", seeknode->data);
+        seeknode = seeknode->link;
+    }
+    printf("[ REAR ] => ");
+}
+
+void Is_Empty(){
+    
+}
+
+void main(){
+    
+    int ch, item;
+    node *temp;
+    printf("\n\t MENU 1) Enqueue 2) Dequeue 3) Is_Empty 4) Display 5) Exit... ");
+    do {
+        printf("\n Enter choice ");
+        scanf("%d", &ch);
+        switch(ch) {
+            case 1:
+                printf("\nEnter item ");
+                scanf("%d", &item);
+                Enqueue(item);
+                break;
+            case 2:
+                Dequeue();
+                break;
+            case 3:
+                Is_Empty();
+                break;
+            case 4:
+                Display();
+                break;
+            case 5:
+                // Free All nodes ( clear heap memory)
+                
+                while(FRONT) {
+                    temp = FRONT;
+                    FRONT = FRONT->link;
+                    free(temp);
+                    printf("Memory-Cleared\n");
+                }
+                exit(0);
+            
+        }
+    
+    } while(ch != 5);
+    
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Strings" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+void swap(char *a, char *b) {
+// with out temp variable using bitwise XOR operation.
+    *a = *a^*b;
+    *b = *a^*b;
+    *a = *a^*b;
+}
+
+void swapUsingTemp(char *a, char *b) {
+    char t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void strReverse( char *s) {
+    int i=0, j=strlen(s)-1;
+    
+    while(i &lt; j) {
+        swap(&s[i], &s[j]);
+        //swapUsingTemp(&s[i], &s[j]);
+        i++;
+        j--;
+    }
+    printf("\nReverse = %s ", s);
+}
+
+void strReverse01( char *s) {
+    for(int i=0, j=strlen(s)-1;i &lt; j; i++,j--) 
+       swap(&s[i], &s[j]);
+    
+    printf("\nReverse01 = %s ", s);
+}
+
+void findlength (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0'; i++);
+
+  printf ("length of %s is %d", s, i);
+}
+
+void strUpper (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0' && (s[i] >= 97 && s[i] &lt;= 122); i++)
+    {
+      // if( s[i] >= 97 && s[i] &lt;=122) {
+      s[i] = s[i] - 32;
+      //  }
+    }
+  printf ("\nUpper = %s", s);
+}
+
+void strLower (char *s)
+{
+  int i;
+  for (i = 0; s[i] != '\0'; i++)
+    {
+      if (s[i] >= 65 && s[i] &lt;= 90)
+	{
+	  s[i] = s[i] + 32;
+	}
+    }
+  printf ("\nLower = %s ", s);
+}
+
+char* substr(char *str,int pos,int n){
+    char *s = (char *)malloc(n*sizeof(char));
+    for(int i=pos;str[i]!='\0';i++)
+       s[i-pos]=str[i];
+  return s;
+}
+
+void main ()
+{
+
+  char str1[] = "weLcome";
+
+  findlength (str1);
+  strUpper (str1);
+  strLower (str1);
+  strReverse(str1);
+
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="NQueens" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-cpp'><code>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#define SIZE 4
+
+void printSolution(int board[SIZE][SIZE]) {
+    int i,j;
+    printf("=======SOL========\n");
+    for (i = 0; i &lt; SIZE; i++)
+    {
+        for (j = 0; j &lt; SIZE; j++)
+           printf(" %d ", board[i][j]);
+        printf("\n");
+    }
+    printf("=================\n");
+}
+
+int isSafe(int board[SIZE][SIZE],int row, int col) {
+    /*
+     \
+      \
+    ___\(i,j)
+      /
+    /
+    
+    */
+    int i,j;
+    for (j=0; j &lt;col; j++) {
+        if(board[row][j])
+          return 0;
+    }
+    for (i=row, j=col; i>=0 && j>=0; i--,j--)
+        if(board[i][j])
+          return 0;
+    for (i=row, j=col; j>=0 && i&lt;SIZE; i++,j--)
+        if(board[i][j])
+          return 0;
+    return 1;
+} 
+
+void solveNQueen(int board[SIZE][SIZE], int col) {
+    
+    // BASE CASE
+    if (col >= SIZE) {
+        printSolution(board);
+        
+    } else {
+        
+        for(int row=0;row&lt;SIZE;row++) {
+        
+            if (isSafe(board,row,col)) {
+                
+                //CHOOSE
+                board[row][col] = 1;
+                
+                //EXPLORE
+                solveNQueen(board, col+1);
+                
+                //UNCHOOSE
+                board[row][col] = 0;
+            }
+        }
+        
+    }
+    
+}
+
+void main ()
+{
+    int board[SIZE][SIZE] = {0};
+
+    solveNQueen(board,0);
+}
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div class="cpp-container"> 
+  <section  id="Bash" class="cpp-container cpp-card">
+    <pre class='prettyprint lang-sh'><code>
+**************************************** LINUX BOOT PROCESS ***********************************
+
+1. Once Computer Starts, the BIOS on the mohter board checks all the input/output devices and the boot process 
+for the computer begins.
+2. The Boot process ( GRUB / other ) looks for a section of a hard drive ( Boot sector ) that contains the data to 
+load operating system. 
+3. This Boot loader then loads the linux Kernel.
+4. Linux Kernel then load the initial RAM disk, which contains a list of device drivers and then it starts to load 
+the computer drives to eventually mount the file system from the hard disk.
+5. After the kernel is all setup and ready to to go, it then starts the initialization system
+
+Various Initialization Systems are...
+init --> upstart --> systemd 
+
+Systemd is the most popular one.
+
+init/upstart relies on bash shell scripts, but systemd replaced all the exisiting fucntionality with pre-compiled 'C' code.
+Advandtages of systemd:
+1) Socket activation
+2) parallel execution
+
+Linux Kernel has a concept, which manages all the system resources in a hierarchial grouping & labeling called
+Control Groups (Cgroups)
+Each Cgroups - Limits the use of the system resources ( CPU, RAM ..etc )
+Each Namespace - Limits the view of the processes , creating a logical isolated boundary.
+
+Systemd took advantage of Cgroups & grouped all its processes together into their own type of Cgroups, which has its own slice 
+of resource pie
+
+Systemd manages the units of services grouped together approproately names slices
+
+systemd-cgls
+systemd-cgtop
+
+systemctl
+systemctl status httpd.service
+systemctl enable httpd.service
+systemclt disable httpd.service
+systemctl is-enabled httpd.servoce
+systemctl help httpd.service
+systemctl start httpd.service
+systemctl stop httpd.service
+systemctl cat httpd.service
+systemctl mask httpd.service
+systemctl unmask httpd.service
+systemctl -H 198.0.0.1 status httpd.service
+systemctl daemon-reload
+systemctl list-unit-files
+systemd-delta
+systemctl edit --full &lt;unit>
+
+systemd journal
+
+journalctl 
+journalctl -r
+journalctl -o verbose
+journalctl -o json-pretty
+echo " hello... " | systemd-cat
+journalctl -r
+journalctl -f
+journalctl -n 20
+journalctl -k ### kernal logs
+journalctl --disk-usage
+
+hostnamectl
+timedatectl
+localectl
+systemd-analyse
+
+
+systemd-inhibit wget http://example.com/abc.iso   ### prevents system from sleeping until it downloads huge file.
+
+/etc/fstab
+df -Th
+lsblk
+
+
+lsmod # list kernal modules
+lscpu # displays cpu architecture
+lspci
+lsblk
+lsusb
+lsdev
+
+
+#### Special Characters
+
+su root -  ( ### '-' at the end will make sure all the configuration settings applied to switch user root )
+/bin/false && echo 'it wont print'
+/bin/true && echo ' now it prints'
+/bin/true || echo 'it wont print'
+/bin/false || echo 'it prints'
+/bin/false; echo 'prints whatever'
+\\ \$ ( ### escape characters )
+### return codes 0-true, 1 -false
+echo $?
+ls -al | more  ( ### '|' pipe symbol gives pagination)
+ls -al > output.txt ( ### redirects output to a file )
+
+###### Environment Variables
+
+set | more
+env | more
+shopt
+export MYPATH = /home/user
+echo $MYPATH
+history
+
+
+###### Processing texts
+https://github.com/linuxacademy1/textfiles
+
+sort numbers.txt
+sort -n numbers.txt
+sort -k2 -n numbers.txt ( ### sort second column in the text file )
+cat numbers.txt
+nl numbers.txt ( ### like cat it dispalys contents with line numbers exluding blank lines )
+nl -ba numbers.txt ( ## number blank lines)
+wc -l /etc/passwd ( ### number of lines in a file )
+wc -w /etc/passwd ( ### number of words )
+wc -c /etc/passwd ( ### number of characters )
+expand -t 10 tabs.txt ( ### 10 spaces between each column )
+cut -c 1-5 columns.txt
+cut -d: -f 1,2,4 columns.txt
+cut -d" " -f 1,2 columns.txt  ( ### tab is default delimeter no need to mention )
+paste file1.txt file2.txt
+join file1.txt file2.txt ( ### only has unique values)
+uniq lines.txt
+uniq -d lines.txt  ( ### print only duplicate unique lines )
+uniq -D lines.txt ( ### print only duplicate lines 
+head /var/log/messages ( ### displays first 10 lines )
+head -n 15 /var/log/messages
+tail /var/log/messages
+tail -n 15 /var/log/messages
+tail -f /var/log/messages ( with updates automatically )
+cat tabs.txt
+tac tabs.txt ( ### displays content in reverse )
+split lines.txt
+split -b 512 lines.txt  ( ### 512 bytes in each file)
+split -k 512 lines.txt  ( ### 512 kilobytes in each file)
+split -l 10 lines.txt ( ### 10 lines in each file - xaa.txt)
+split -a 3 -l 10 lines.txt ( ### output file name xaaa.txt)
+od telnet.rpm ( ### displays binary file in octal format, other formats -b , -o, -x, -d, -f)
+pr lines.txt ( ### prints the contents of the file to terminal )
+pr --columns=2 lines.txt ( ### prints in 2 columns )
+
+tr 'a' 'A' &lt; lines.txt ( ### translate command replaces a with A , but we cant use tr to replace entire word)
+tr 'a-e' 'A-E' &lt; lines.txt 
+
+To replace entire word we use SED unility
+sed 's/the/THE/g' sedexamples.txt ( ### substitiutes the with THE globally across the file )
+sed 's/the/THE/' sedexamples.txt ( ###replaces only first instance in each line not globally )
+sed -e 's/the/NOW/g' -e 's/NOW/NEVER/g' sedexamples.txt ( ### multiple commands in a single line )
+vim sedopts.txt
+s/the/THE/g
+s/THE/NOW/g
+s/NOW/NEVER/g
+
+sed -f sedopts.txt sedexamples.txt
+more lines.txt ( displays content page wise using tab space and it allows only forward)
+less lines.txt ( f forward b for backword)
+
+
+Basic File Management
+ls -l /etc
+ls -al /etc
+ls -d ( lists the directories)
+mkdir -p mydir/dir1/dir2/dir3 ( creates all sub directories)
+file /etc/* ( diplays file types information )
+
+  </code>
+  </pre>
+  </section>
+  </div>
+  <div> 
+   <section  id="Others">
+      <ul class="navigation-list">
+       <li class="navigation-item"><a href="https://www.openculture.com/computer_science_free_courses" class="navigation-link"> Computer_science_free_courses </a></li>
+        <li class="navigation-item"><a href="https://www.mulesoft.com/resources/api/what-is-an-api" class="navigation-link"> what-is-an-api </a></li>
+     </ul>
+  
+  </section>
+  </div>
+  
 </body>
   
 </html>
