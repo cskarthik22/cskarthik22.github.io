@@ -68,6 +68,6 @@
   }
   
   .cpp-card:first-child {
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
   }
 }
