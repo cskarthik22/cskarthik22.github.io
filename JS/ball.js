@@ -5,7 +5,7 @@ const cWidth = 500
 const cHeight = 500
 
 const bImg = new Image()
-bImg.src = 'https://images-na.ssl-images-amazon.com/images/I/61IkrxQ9p8L._AC_SL1500_.jpg'
+bImg.src = 'images/ball.jpg'
 
 const bWidth = 100
 const bHeight = 100
