@@ -5,7 +5,7 @@ const cWidth = 500
 const cHeight = 500
 
 const bImg = new Image()
-bImg.src = 'images/ball.jpg'
+bImg.src = '../images/ball.jpg'
 
 const bWidth = 100
 const bHeight = 100
